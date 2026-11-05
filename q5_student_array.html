@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Array</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <div id="output"></div>
+
+    <script>
+        var students = [
+            { name: "John", regno: "UR13CS129", yob: 1998 },
+            { name: "Mary", regno: "UR13CS130", yob: 2001 },
+            { name: "Ravi", regno: "UR13CS131", yob: 1999 },
+            { name: "Priya", regno: "UR13CS132", yob: 2003 }
+        ];
+
+        var result = "";
+
+        for (var i = 0; i < students.length; i++) {
+            var s = students[i];
+
+            result += s.name + "'s Register Number is " +
+                      s.regno + "<br>";
+
+            if (s.yob < 2000) {
+                result += s.name + " was born before 2000.<br><br>";
+            } else if (s.yob > 2000) {
+                result += s.name + " was born after 2000.<br><br>";
+            } else {
+                result += s.name + " was born in 2000.<br><br>";
+            }
+        }
+
+        document.getElementById("output").innerHTML = result;
+    </script>
+</body>
+</html>
